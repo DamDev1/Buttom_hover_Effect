@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background: #F8A35A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    text-align: center;
+}
+
+.btn{
+    position: relative;	
+	padding: 1.4rem 4.2rem;
+	padding-right: 3.1rem;
+	font-size: 1.4rem;
+	color: white;
+	letter-spacing: 1.1rem;
+	text-transform: uppercase;
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+	cursor: pointer;
+	user-select: none;
+    margin: 2rem;
+}
+
+.btn:before, .btn:after {
+	content: '';
+	position: absolute;	
+	transition: inherit;
+	z-index: -1;
+}
+
+.btn:hover {
+	color: #F8A35A;
+	transition-delay: .5s;
+}
+
+.btn:hover:before {
+	transition-delay: 0s;
+}
+
+.btn:hover:after {
+	background: white;
+	transition-delay: .35s;
+}
+
+/* ********************Top ******************* */
+.from_top:before, 
+.from_top:after {
+	left: 0;
+	height: 0;
+	width: 100%;
+}
+
+.from_top:before {
+	bottom: 0;	
+	border: 1px solid white;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.from_top:after {
+	top: 0;
+	height: 0;
+}
+
+.from_top:hover:before,
+.from_top:hover:after {
+	height: 100%;
+}
+
+/* ********************left ******************* */
+.from_left:before, 
+.from_left:after {
+	top: 0;
+	width: 0;
+	height: 100%;
+}
+
+.from_left:before {
+	right: 0;
+	border: 1px solid white;
+	border-left: 0;
+	border-right: 0;	
+}
+
+.from_left:after {
+	left: 0;
+}
+
+.from_left:hover:before,
+.from_left:hover:after {
+	width: 100%;
+}
+
+/* ********************right ******************* */
+.from_right:before, 
+.from_right:after {
+	top: 0;
+	width: 0;
+	height: 100%;
+}
+
+.from_right:before {
+	right: 0;
+	border: 1px solid white;
+	border-left: 0;
+	border-right: 0;	
+}
+
+.from_right:after {
+	right: 0;
+}
+
+.from_right:hover:before,
+.from_right:hover:after {
+	width: 100%;
+}
+
+/* ********************bottom ******************* */
+.from_bottom:before, 
+.from_bottom:after {
+	left: 0;
+	height: 0;
+	width: 100%;
+}
+
+.from_bottom:before {
+	top: 0;	
+	border: 1px solid white;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.from_bottom:after {
+    bottom: 0;
+	height: 0;
+}
+
+.from_bottom:hover:before,
+.from_bottom:hover:after {
+	height: 100%;
+}
+
+/* ********************center ******************* */
+.from_center:before{
+	top: 0;
+	left: 50%;
+	height: 100%;
+	width: 0;
+	border: 1px solid white;
+	border-left: 0;
+	border-right: 0;
+}
+
+.from_center::after {
+	bottom: 0;
+	left: 0;
+	height: 0;
+	width: 100%;
+	background: white;
+}
+
+.from_center:hover:before {
+	left: 0;
+	width: 100%;
+}
+
+.from_center:hover:after {
+	top: 0;
+	height: 100%;
+}
